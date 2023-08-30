@@ -9,24 +9,7 @@
   </div>
 </div>
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">ジョナサン</div>
-      <div class="message-date">2023/8/26(Sat) 11:59:00</div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">It's my birthday!</div>
-    </div>
-  </div>
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">ジョナサン</div>
-      <div class="message-date">2023/8/26(Sat) 11:59:30</div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">Happy birthday to me!</div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
